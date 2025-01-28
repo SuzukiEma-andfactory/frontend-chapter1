@@ -1,8 +1,55 @@
-ul {
-  margin: 0 0 20px;
-  list-style: none;
+// ul {
+//   margin: 0 0 20px;
+//   list-style: none;
 
+//   li {
+//     padding: 10px;
+//   }
+// }
+
+// lecture11
+// #main {
+//   width: 1000px;
+//   margin: 0 auto;
+
+//   section {
+//     padding: 10px;
+
+//     h1 {
+//       font-size: 1.4rem;
+//     }
+
+//     p {
+//       margin-bottom: 20px;
+//     }
+
+//     p.note {
+//       color: #f00;
+//     }
+
+//     ul {
+//       margin-bottom: 20px;
+//     }
+
+//     li {
+//       margin-left: 20px;
+//     }
+//   }
+// }
+
+// lecture12
+ul {
   li {
-    padding: 10px;
+    + li {
+      border-bottom: 1px solid #666;
+    }
+
+    ~ li {
+      color: #f00;
+    }
+
+    > li {
+      background: #ccc;
+    }
   }
 }

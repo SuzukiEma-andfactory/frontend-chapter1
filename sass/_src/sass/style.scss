@@ -55,50 +55,77 @@
 // }
 
 // lecture13
-.btn {
-  display: block;
-  border-radius: 5px;
-  width: 80px;
-  height: 40px;
+// .btn {
+//   display: block;
+//   border-radius: 5px;
+//   width: 80px;
+//   height: 40px;
 
-  &.red {
-    background: #f00;
-  }
+//   &.red {
+//     background: #f00;
+//   }
 
-  &.green {
-    background: rgba(16, 92, 3, 0.742);
-  }
-}
+//   &.green {
+//     background: rgba(16, 92, 3, 0.742);
+//   }
+// }
 
-aside {
-  width: 240px;
+// aside {
+//   width: 240px;
 
-  .menu {
-    margin-bottom: 20px;
-  }
+//   .menu {
+//     margin-bottom: 20px;
+//   }
 
-  // body要素にid="top"がついている場合、aside要素にスタイル指定
-  body#top & {
-    width: 300px;
-  }
-}
+//   // body要素にid="top"がついている場合、aside要素にスタイル指定
+//   body#top & {
+//     width: 300px;
+//   }
+// }
 
-a {
-  text-decoration: none;
+// a {
+//   text-decoration: none;
 
-  &:hover {
-    text-decoration: underline;
-  }
-}
+//   &:hover {
+//     text-decoration: underline;
+//   }
+// }
 
-.block {
-  width: 500px;
+// .block {
+//   width: 500px;
 
-  &__element {
-    margin-bottom: 20px;
+//   &__element {
+//     margin-bottom: 20px;
 
-    &--modifier {
-      background: #f00;
+//     &--modifier {
+//       background: #f00;
+//     }
+//   }
+// }
+
+// lecture14
+div.border-box {
+  border: {
+    top: 2px solid #000;
+
+    bottom: {
+      width: 5px;
+      style: dotted;
+      color: #f00;
     }
+
+    radius: 5px;
   }
+}
+
+div.no-bottom-border1 {
+  border: {
+    top: 1px solid #666;
+    left: 1px solid #666;
+    right: 1px solid #666;
+  }
+}
+
+div.no-bottom-border2 {
+  border: 1px solid #666;
 }

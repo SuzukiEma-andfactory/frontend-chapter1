@@ -104,28 +104,62 @@
 // }
 
 // lecture14
-div.border-box {
-  border: {
-    top: 2px solid #000;
+// div.border-box {
+//   border: {
+//     top: 2px solid #000;
 
-    bottom: {
-      width: 5px;
-      style: dotted;
-      color: #f00;
+//     bottom: {
+//       width: 5px;
+//       style: dotted;
+//       color: #f00;
+//     }
+
+//     radius: 5px;
+//   }
+// }
+
+// div.no-bottom-border1 {
+//   border: {
+//     top: 1px solid #666;
+//     left: 1px solid #666;
+//     right: 1px solid #666;
+//   }
+// }
+
+// div.no-bottom-border2 {
+//   border: 1px solid #666;
+// }
+
+// lecture15
+main {
+  width: 1024px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: 0;
+
+    @media screen and (max-width: 1024px) {
+      width: 800px;
     }
+  }
 
-    radius: 5px;
+  h1 {
+    font-size: 1rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.2rem;
+    }
   }
 }
 
-div.no-bottom-border1 {
-  border: {
-    top: 1px solid #666;
-    left: 1px solid #666;
-    right: 1px solid #666;
-  }
+#header {
+  height: 100px;
+  border-bottom: 1px solid #000;
 }
 
-div.no-bottom-border2 {
-  border: 1px solid #666;
+@media print {
+  #header {
+    display: none;
+  }
 }

@@ -1,0 +1,28 @@
+#main {
+  width: 1000px;
+  margin: 0 auto;
+
+  section {
+    padding: 10px;
+
+    h1 {
+      font-size: 1.4rem;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    p.note {
+      color: #f00;
+    }
+
+    ul {
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-left: 20px;
+    }
+  }
+}

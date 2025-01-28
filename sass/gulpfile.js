@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
-'use strict'
+'use strict';
 
 var { src, watch, dest, series } = require('gulp');
 var sass = require('gulp-sass')(require('sass'));
 
 const sassBuild = (done) => {
   src('./_src/sass/**/*.scss')
-    .pipe(sass({outputStyle: 'expanded'}))
+    .pipe(sass({ outputStyle: 'expanded' }))
     .pipe(dest('./css'));
   done();
 };

@@ -38,18 +38,67 @@
 // }
 
 // lecture12
-ul {
-  li {
-    + li {
-      border-bottom: 1px solid #666;
-    }
+// ul {
+//   li {
+//     + li {
+//       border-bottom: 1px solid #666;
+//     }
 
-    ~ li {
-      color: #f00;
-    }
+//     ~ li {
+//       color: #f00;
+//     }
 
-    > li {
-      background: #ccc;
+//     > li {
+//       background: #ccc;
+//     }
+//   }
+// }
+
+// lecture13
+.btn {
+  display: block;
+  border-radius: 5px;
+  width: 80px;
+  height: 40px;
+
+  &.red {
+    background: #f00;
+  }
+
+  &.green {
+    background: rgba(16, 92, 3, 0.742);
+  }
+}
+
+aside {
+  width: 240px;
+
+  .menu {
+    margin-bottom: 20px;
+  }
+
+  // body要素にid="top"がついている場合、aside要素にスタイル指定
+  body#top & {
+    width: 300px;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.block {
+  width: 500px;
+
+  &__element {
+    margin-bottom: 20px;
+
+    &--modifier {
+      background: #f00;
     }
   }
 }

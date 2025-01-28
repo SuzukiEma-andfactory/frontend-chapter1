@@ -1,9 +1,39 @@
-ul li + li {
-  border-bottom: 1px solid #666;
+.btn {
+  display: block;
+  border-radius: 5px;
+  width: 80px;
+  height: 40px;
 }
-ul li ~ li {
-  color: #f00;
+.btn.red {
+  background: #f00;
 }
-ul li > li {
-  background: #ccc;
+.btn.green {
+  background: rgba(16, 92, 3, 0.742);
+}
+
+aside {
+  width: 240px;
+}
+aside .menu {
+  margin-bottom: 20px;
+}
+body#top aside {
+  width: 300px;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.block {
+  width: 500px;
+}
+.block__element {
+  margin-bottom: 20px;
+}
+.block__element--modifier {
+  background: #f00;
 }

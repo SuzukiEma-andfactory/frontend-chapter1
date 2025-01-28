@@ -131,35 +131,64 @@
 // }
 
 // lecture15
-main {
-  width: 1024px;
-  margin: 0 auto;
+// main {
+//   width: 1024px;
+//   margin: 0 auto;
+
+//   @media screen and (max-width: 768px) {
+//     width: 100%;
+//     margin: 0;
+
+//     @media screen and (max-width: 1024px) {
+//       width: 800px;
+//     }
+//   }
+
+//   h1 {
+//     font-size: 1rem;
+
+//     @media screen and (max-width: 768px) {
+//       font-size: 1.2rem;
+//     }
+//   }
+// }
+
+// #header {
+//   height: 100px;
+//   border-bottom: 1px solid #000;
+// }
+
+// @media print {
+//   #header {
+//     display: none;
+//   }
+// }
+
+// lecture16
+.block {
+  .element1 {
+    width: 800px;
+  }
+
+  // 生成後のcssが↓になる
+  // .element1 {
+  //   width: 1000px;
+  // }
+  @at-root .element1 {
+    width: 1000px;
+  }
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    margin: 0;
 
-    @media screen and (max-width: 1024px) {
-      width: 800px;
+    // 生成後のcss
+    // .block .item {
+    //   margin-bottom: 30px;
+    // }
+    @at-root (without: media) {
+      .item {
+        margin-bottom: 30px;
+      }
     }
-  }
-
-  h1 {
-    font-size: 1rem;
-
-    @media screen and (max-width: 768px) {
-      font-size: 1.2rem;
-    }
-  }
-}
-
-#header {
-  height: 100px;
-  border-bottom: 1px solid #000;
-}
-
-@media print {
-  #header {
-    display: none;
   }
 }

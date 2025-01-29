@@ -1,0 +1,23 @@
+@mixin roundBox {
+  border-radius: 10px;
+  background: red;
+  border: 1px solid black;
+}
+
+.slideArea {
+  @include roundBox;
+}
+
+.bottonArea {
+  @include roundBox;
+}
+
+.main {
+  @mixin mainBox {
+    margin-bottom: 30px;
+  }
+
+  .contents {
+    @include mainBox;
+  }
+}

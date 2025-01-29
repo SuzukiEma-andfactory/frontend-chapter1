@@ -1,0 +1,15 @@
+.slideArea {
+  border-radius: 10px;
+  background: red;
+  border: 1px solid black;
+}
+
+.bottonArea {
+  border-radius: 10px;
+  background: red;
+  border: 1px solid black;
+}
+
+.main .contents {
+  margin-bottom: 30px;
+}

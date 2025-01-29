@@ -1,0 +1,26 @@
+.box {
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.area {
+  @extend .box;
+  background: blue;
+}
+
+@media screen and (max-width: 768px) {
+  %box-media {
+    padding: 0;
+  }
+
+  .item {
+    // 使用不可
+    // @extend %box;
+    @extend %box-media;
+  }
+}
+
+// メデイアクエリの中に生成される
+.item-media {
+  @extend %box-media;
+}

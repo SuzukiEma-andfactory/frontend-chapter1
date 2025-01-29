@@ -1,0 +1,14 @@
+.box, .area {
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.area {
+  background: blue;
+}
+
+@media screen and (max-width: 768px) {
+  .item-media, .item {
+    padding: 0;
+  }
+}

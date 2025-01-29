@@ -5,3 +5,21 @@
 .style2 {
   margin: 10px;
 }
+
+p {
+  margin-bottom: 0;
+}
+.root {
+  color: red;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+p #contents p {
+  padding: 19px;
+}
+
+section p {
+  margin-bottom: 20px;
+}

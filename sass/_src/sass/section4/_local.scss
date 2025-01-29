@@ -1,0 +1,17 @@
+p {
+  margin-bottom: 0;
+
+  @at-root .root {
+    color: red;
+  }
+
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  #contents p {
+    padding: 19px;
+  }
+}

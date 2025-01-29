@@ -1,0 +1,38 @@
+// ミックスインは定義元のbox-mixin自体はビルド後生成されず、使用したクラスごとにコピペされるイメージ
+@mixin box-mixin {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.box1 {
+  @include box-mixin;
+}
+
+.box12 {
+  @include box-mixin;
+}
+
+.button {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.errorButton {
+  @extend .button;
+  background-color: #fff;
+}
+
+// 生成後buttonクラスのスタイルとグルーピングされるため、関係ない要素に@extend使用するのは良くない
+.news_area1 {
+  @extend .button;
+}
+
+// 同じスタイルを使いまわしたくても、以下のように定義しなおした方がいい
+.area {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.news_area2 {
+  @extend .area;
+}

@@ -1,0 +1,23 @@
+.box1 {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.box12 {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.button, .news_area1, .errorButton {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.errorButton {
+  background-color: #fff;
+}
+
+.area, .news_area2 {
+  padding: 10px;
+  border: 1px solid black;
+}

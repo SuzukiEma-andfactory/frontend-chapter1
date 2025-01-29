@@ -53,7 +53,8 @@ $calcWidth: 1000px;
 .calc4 {
   // width: (500px / 8);
   // 変数使用時は()不要
-  width: $calcWidth / 8;
+  // ↓calc()の外で / 使用が非推奨
+  // width: $calcWidth / 8;
 }
 
 .calc5 {

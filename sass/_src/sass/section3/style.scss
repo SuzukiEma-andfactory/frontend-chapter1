@@ -33,3 +33,29 @@ footer {
   // footer内のvalueを参照する
   margin: $value;
 }
+
+// lecture20
+$calcWidth: 1000px;
+
+.calc1 {
+  width: $calcWidth + 8;
+  content: "文字列の" + "接続";
+}
+
+.calc2 {
+  width: 500px - 8;
+}
+
+.calc3 {
+  width: 500px * 8;
+}
+
+.calc4 {
+  // width: (500px / 8);
+  // 変数使用時は()不要
+  width: $calcWidth / 8;
+}
+
+.calc5 {
+  width: 500px % 8;
+}

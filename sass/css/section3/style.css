@@ -19,3 +19,24 @@ footer {
   padding: 30px;
   margin: 50px;
 }
+
+.calc1 {
+  width: 1008px;
+  content: "文字列の接続";
+}
+
+.calc2 {
+  width: 492px;
+}
+
+.calc3 {
+  width: 4000px;
+}
+
+.calc4 {
+  width: 125px;
+}
+
+.calc5 {
+  width: 4px;
+}

@@ -1,0 +1,33 @@
+.text-red {
+  color: red;
+}
+
+.borderBox {
+  border: 1px solid black;
+}
+
+.item {
+  padding: 10px;
+  @extend .text-red;
+  @extend .borderBox;
+}
+
+.note {
+  @extend .text-red;
+  font-size: 12px;
+}
+
+// ↓生成後はこのように継承元の方に追加される
+// .text-red, .note, .error, .item {
+//   color: red;
+// }
+.error {
+  @extend .note;
+  font-weight: bold;
+}
+
+.area {
+  // The target selector was not found.Use "@extend %box !optional" to avoid this error.というエラーになる
+  // @extend %box;
+  @extend %box !optional;
+}

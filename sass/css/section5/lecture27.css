@@ -1,0 +1,19 @@
+.main {
+  color: red;
+  font-size: 10px;
+}
+
+.side {
+  color: blue;
+  font-size: 8px;
+}
+
+.first {
+  color: skyblue;
+  font-size: 8px;
+}
+
+.second {
+  color: blue;
+  font-size: 20px;
+}

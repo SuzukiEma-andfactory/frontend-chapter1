@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/* 変数と演算 */
+.border-box {
+  border: 1px solid #bcafdc;
+}
+
+.border-box {
+  background: #bcafdc;
+}

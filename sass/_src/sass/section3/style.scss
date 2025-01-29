@@ -1,6 +1,6 @@
 /* 変数と演算 */
 
-// lecture19
+// lecture18
 // 変数の定義
 $pink: #bcafdc;
 
@@ -10,4 +10,26 @@ $pink: #bcafdc;
 
 .border-box {
   background: $pink;
+}
+
+// lecture19
+$value: 30px;
+
+section {
+  // グローバルのvalueを参照する
+  margin-bottom: $value;
+  $value: 20px;
+
+  // section内のvalueを参照する
+  p {
+    padding: $value;
+  }
+}
+
+footer {
+  // グローバルのvalueを参照する
+  padding: $value;
+  $value: 50px;
+  // footer内のvalueを参照する
+  margin: $value;
 }

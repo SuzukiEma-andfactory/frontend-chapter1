@@ -7,3 +7,15 @@
 .border-box {
   background: #bcafdc;
 }
+
+section {
+  margin-bottom: 30px;
+}
+section p {
+  padding: 20px;
+}
+
+footer {
+  padding: 30px;
+  margin: 50px;
+}

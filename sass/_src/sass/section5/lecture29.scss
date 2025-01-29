@@ -1,0 +1,14 @@
+@mixin media($width-media: 768px) {
+  @media only screen and (max-width: $width-media) {
+    @content;
+  }
+}
+
+.item {
+  .image {
+    float: left;
+    @include media {
+      float: right;
+    }
+  }
+}

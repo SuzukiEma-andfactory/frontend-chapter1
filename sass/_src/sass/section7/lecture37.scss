@@ -1,0 +1,24 @@
+// @for ループの使用
+@for $i from 1 to 3 {
+  $index: $i * 10;
+  .mt#{$index} {
+    margin-top: $i * 10;
+  }
+}
+
+// @while ループの使用
+$i: 0;
+@while $i < 30 {
+  .pb#{$i} {
+    padding-bottom: $i * 10;
+  }
+  $i: $i + 10;
+}
+
+// @each ループの使用
+$icons: top, qa, contact;
+@each $value in $icons {
+  .icon-#{$value} {
+    background: url('../img/' + $value + '.png');
+  }
+}

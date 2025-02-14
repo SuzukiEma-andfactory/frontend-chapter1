@@ -19,10 +19,11 @@ $height: 100px;
 
 .item3 {
   $width: 100px !global;
-  $color: #ff0 !global;
+  // 現在は使用不可
+  // $color: #ff0 !global;
 }
 
 .item4 {
   width: $width;
-  color: $color;
+  // color: $color;
 }

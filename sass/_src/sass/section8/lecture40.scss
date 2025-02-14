@@ -1,0 +1,35 @@
+// リストの定義
+$list1: pen, pineapple;
+$list2: apple, pen;
+
+// リストの長さを取得
+.length {
+  // z-index: length($list1);
+}
+
+// 指定したインデックスの要素を取得
+.nth {
+  // content: nth($list1, 2);
+}
+
+// リストを結合
+.join {
+  // content: join($list1, $list2);
+}
+
+// リストに要素を追加
+.append {
+  // content: append($list1, apple);
+}
+
+// マップ（連想配列）の定義
+$map: (
+  bgcolor: #ededed,
+  fontcolor: #ff0000,
+  bdcolor: #000000
+);
+
+// マップから値を取得
+.mapget {
+  // color: map-get($map, fontcolor);
+}

@@ -1,0 +1,28 @@
+// ユーザー定義関数: 2つの値を足す
+@function sum($value1: 50px, $value2: 50px) {
+  @return $value1 + $value2;
+}
+
+// sum関数を適用
+.sum {
+  width: sum(100px, 200px);
+  height: sum();
+}
+
+// ユーザー定義関数: 配列の平均を計算
+@function average($arr) {
+  $sum: 0;
+  @each $value in $arr {
+    $sum: $sum + $value;
+  }
+  // @return round($sum / length($arr));
+}
+
+// リスト（数値配列）の定義
+$list: 1, 7, 9, 23, 11;
+
+// average関数を適用
+.ave {
+  margin: average($list);
+  // .test: function-exists(length);
+}

@@ -1,0 +1,16 @@
+.box, .item {
+  background-image: url(https://source.unsplash.com/random/);
+  line-height: 100px/10;
+}
+
+.mt0 {
+  margin-top: 0px;
+}
+
+.mt5 {
+  margin-top: 5px;
+}
+
+.text {
+  content: "CSS and Sass";
+}

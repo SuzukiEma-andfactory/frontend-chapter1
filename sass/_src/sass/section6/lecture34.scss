@@ -1,0 +1,21 @@
+$IMG_PATH: 'https://source.unsplash.com/random/'; // フリー画像のURL
+$SELECTOR: '.box, .item';
+
+#{$SELECTOR} {
+  $height: 100px;
+  $line-count: 10;
+  background-image: url(#{$IMG_PATH});
+  line-height: #{$height} / #{$line-count};
+}
+
+@for $i from 0 to 2 {
+  .mt#{$i * 5} {
+    margin-top: 5px * $i;
+  }
+}
+
+$text: 'CSS';
+
+.text {
+  content: '#{$text} and Sass';
+}

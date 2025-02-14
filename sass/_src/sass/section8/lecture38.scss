@@ -1,0 +1,10 @@
+// ミックスインの定義
+@mixin ht($value) {
+  height: $value;
+}
+
+// .box クラスのスタイル
+.box {
+  // width: round(100px / 3);
+  // @include ht(100px / 3);
+}

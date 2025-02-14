@@ -1,0 +1,28 @@
+// !default：グローバル変数を参照するようになる
+// !global：定義位置がローカルであっても前のグローバル変数を上書きする
+$width: 300px;
+$height: 100px;
+
+.item1 {
+  $width: 33% !default;
+  $height: 20%;
+  width: $width;
+  height: $height;
+}
+
+.item2 {
+  $width: 200px;
+  $height: 50px !default;
+  width: $width;
+  height: $height;
+}
+
+.item3 {
+  $width: 100px !global;
+  $color: #ff0 !global;
+}
+
+.item4 {
+  width: $width;
+  color: $color;
+}

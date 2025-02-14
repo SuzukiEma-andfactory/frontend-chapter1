@@ -1,0 +1,39 @@
+// // 数値の加算を行う関数
+// @function sum($value1: 50px, $value2: 50px) {
+//   $result: 0;
+
+//   @if type-of($value1) == number {
+//     $result: $value1 + $value2;
+//   } @else {
+//     @error "#{$value1} は数値ではありません";
+//   }
+
+//   @return $result;
+// }
+
+// // sum関数を適用
+// .sum {
+//   width: sum('100px', 200px); // "100px" は文字列なのでエラー発生
+//   height: sum();
+// }
+
+// // 配列の平均を計算する関数
+// @function average($arr) {
+//   $sum: 0;
+
+//   @each $value in $arr {
+//     $sum: $sum + $value;
+//     @debug $sum;
+//   }
+
+//   @return round($sum / length($arr));
+// }
+
+// // リスト（数値配列）の定義
+// $list: 1, 7, 9, 23, 11;
+
+// // average関数を適用
+// .ave {
+//   margin: average($list);
+//   test: function-exists(length);
+// }

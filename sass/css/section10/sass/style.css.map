@@ -1,0 +1,1 @@
+{"version":3,"sources":["section10/sass/data:;charset=utf-8,h1%20%7B%0A%20%20tab-size:%200;%0A%7D%0A"],"names":[],"mappings":"AAAA;EACE","sourcesContent":["h1 {\n  tab-size: 0;\n}\n"],"file":"style.css"}

@@ -1,12 +1,25 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 'use strict';
 
-var { src, watch, dest, series } = require('gulp');
-var sass = require('gulp-sass')(require('sass'));
+const { src, watch, dest, series } = require('gulp');
+const gulpSass = require('gulp-sass');
+const sass = require('sass');
+const sassLint = require('gulp-sass-lint');
+const sourcemaps = require('gulp-sourcemaps');
+
+const compileSass = gulpSass(sass);
 
 const sassBuild = (done) => {
   src('./_src/sass/**/*.scss')
-    .pipe(sass({ outputStyle: 'expanded' }))
+    .pipe(sourcemaps.init())
+    .pipe(
+      sassLint({
+        configFile: '.scss-lint.yml',
+      })
+    )
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
+    .pipe(compileSass({ outputStyle: 'expanded' }))
+    .pipe(sourcemaps.write('.')) // ソースマップをCSSファイルと同じディレクトリに出力
     .pipe(dest('./css'));
   done();
 };

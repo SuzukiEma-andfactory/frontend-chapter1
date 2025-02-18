@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 15px;
+  color: #333;
+}
+
+p,
+li {
+  line-height: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+.header {
+  height: 200px;
+  width: 100%;
+}
+
+.g_navi {
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+
+  ul {
+    width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    li {
+      width: 150px;
+      height: 60px;
+      float: left;
+      text-align: center;
+
+      a {
+        display: block;
+        line-height: 60px;
+
+        &:hover {
+          background: rgba(#000, 0.1);
+        }
+      }
+    }
+  }
+}

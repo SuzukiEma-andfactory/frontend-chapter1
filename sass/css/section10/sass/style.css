@@ -1,4 +1,70 @@
-h1 {
-  tab-size: 0;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 15px;
+  color: #333;
+}
+
+p,
+li {
+  line-height: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+li {
+  list-style: none;
+}
+
+.header {
+  height: 200px;
+  width: 100%;
+}
+
+.g_navi {
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+.g_navi ul {
+  width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.g_navi ul li {
+  width: 150px;
+  height: 60px;
+  float: left;
+  text-align: center;
+}
+.g_navi ul li a {
+  display: block;
+  line-height: 60px;
+}
+.g_navi ul li a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.main_area section {
+  margin-bottom: 30px;
+  overflow: hidden;
+  clear: both;
+}
+.main_area section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.main_area section p {
+  margin-bottom: 20px;
+}
+.main_area section .thumb_img {
+  margin: 0 20px 20px 0;
+  float: left;
 }
 /*# sourceMappingURL=style.css.map */

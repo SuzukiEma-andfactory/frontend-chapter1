@@ -1,0 +1,26 @@
+$end: 5;
+$step: 10;
+$useMargin: false;
+$usePadding: true;
+
+@for $i from 0 through $end {
+  @if ($useMargin) {
+    .mt#{$i * $step} {
+      margin-top: #{$step * $i}px;;
+    }
+
+    .mb#{$i * $step} {
+      margin-bottom: #{$step * $i}px;;
+    }
+  }
+
+  @if ($usePadding) {
+    .pt#{$i * $step} {
+      padding-top: #{$step * $i}px;;
+    }
+
+    .pb#{$i * $step} {
+      padding-bottom: #{$step * $i}px;;
+    }
+  }
+}

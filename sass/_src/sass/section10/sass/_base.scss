@@ -1,5 +1,6 @@
 @use 'variables' as *;
 @use 'mixin' as *;
+@use 'media' as *;
 // @use 'variables'としてvariables.$GNaviHeightを指定するとsass-lintでエラー出る
 
 * {
@@ -31,6 +32,7 @@ li {
   width: 100%;
   background: url('#{map-get($path, img)}header_001.jpg') no-repeat center top;
   background-size: cover;
+  text-align: center;
 
   .title {
     width: map-get($width, contents);
@@ -78,18 +80,45 @@ li {
   margin: 0 auto;
   overflow: hidden;
 
+  @include media('tb') {
+    width: 100%;
+  }
+
   .main_area {
     width: map-get($width, contents) - map-get($width, sideArea) - $AreaPadding *
       2;
     // width: $ContentsWidth - $SideAreaWidth - $AreaPadding * 2;
     float: left;
     padding: $AreaPadding;
+
+    @include media('tb') {
+      width: calc(
+        100% - #{map-get($width, $SideAreaWidth)} - #{map-get($padding, area) * 2}
+      );
+    }
+
+    @include media('sp') {
+      width: 100%;
+      float: none;
+    }
   }
 
   .side_area {
     width: map-get($width, sideArea) - $AreaPadding * 2;
     float: right;
     padding: $AreaPadding;
+
+    @include media('tb') {
+      // width: calc(100% - #{map-get($width, sideArea)});
+      width: map-get($width, contents) - map-get($width, sideArea) -
+        $AreaPadding * 2;
+      float: left;
+    }
+
+    @include media('sp') {
+      width: 100%;
+      float: left;
+    }
 
     %side_area_box {
       border: 1px solid #eee;

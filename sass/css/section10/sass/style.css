@@ -25,6 +25,8 @@ li {
 .header {
   height: 200px;
   width: 100%;
+  background: url("/img/header_001.jpg") no-repeat center top;
+  background-size: cover;
 }
 
 .g_navi {
@@ -49,6 +51,22 @@ li {
 }
 .g_navi ul li a:hover {
   background: rgba(0, 0, 0, 0.1);
+}
+
+.contents {
+  width: 1024px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.contents .main_area {
+  width: 684px;
+  float: left;
+  padding: 20px;
+}
+.contents .side_area {
+  width: 260px;
+  float: right;
+  padding: 20px;
 }
 
 .main_area section {

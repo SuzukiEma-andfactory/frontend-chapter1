@@ -1,3 +1,6 @@
+@use 'variables' as *;
+// @use 'variables'としてvariables.$GNaviHeightを指定するとsass-lintでエラー出る
+
 * {
   margin: 0;
   padding: 0;
@@ -25,10 +28,12 @@ li {
 .header {
   height: 200px;
   width: 100%;
+  background: url('#{map-get($path, img)}header_001.jpg') no-repeat center top;
+  background-size: cover;
 }
 
 .g_navi {
-  height: 60px;
+  height: $GNaviHeight;
   width: 100%;
   border-bottom: 1px solid #eee;
 
@@ -38,19 +43,40 @@ li {
     overflow: hidden;
 
     li {
-      width: 150px;
-      height: 60px;
+      width: $GNaviButtonWidth;
+      height: $GNaviHeight;
       float: left;
       text-align: center;
 
       a {
         display: block;
-        line-height: 60px;
+        line-height: $GNaviHeight;
 
         &:hover {
           background: rgba(#000, 0.1);
         }
       }
     }
+  }
+}
+
+.contents {
+  width: map-get($map: $width, $key: contents);
+  // width: $ContentsWidth;
+  margin: 0 auto;
+  overflow: hidden;
+
+  .main_area {
+    width: map-get($width, contents) - map-get($width, sideArea) - $AreaPadding *
+      2;
+    // width: $ContentsWidth - $SideAreaWidth - $AreaPadding * 2;
+    float: left;
+    padding: $AreaPadding;
+  }
+
+  .side_area {
+    width: map-get($width, sideArea) - $AreaPadding * 2;
+    float: right;
+    padding: $AreaPadding;
   }
 }

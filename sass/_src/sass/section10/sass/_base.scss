@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'mixin' as *;
 // @use 'variables'としてvariables.$GNaviHeightを指定するとsass-lintでエラー出る
 
 * {
@@ -30,6 +31,17 @@ li {
   width: 100%;
   background: url('#{map-get($path, img)}header_001.jpg') no-repeat center top;
   background-size: cover;
+
+  .title {
+    width: map-get($width, contents);
+    margin: 0 auto;
+    text-align: center;
+    @include textShadow(#fff, 1);
+  }
+
+  .sub-title {
+    font-size: 1.2rem;
+  }
 }
 
 .g_navi {
@@ -78,5 +90,35 @@ li {
     width: map-get($width, sideArea) - $AreaPadding * 2;
     float: right;
     padding: $AreaPadding;
+
+    %side_area_box {
+      border: 1px solid #eee;
+      bra: 5px;
+      padding: 10px;
+    }
+
+    .search_area {
+      @extend %side_area_box;
+      margin-bottom: 20px;
+    }
+
+    .category_area {
+      @extend %side_area_box;
+
+      li {
+        border-top: 1px solid #eee;
+
+        a {
+          display: block;
+          padding: 3px;
+
+          &:hover {
+            background: rgba(#000, 0.1);
+          }
+        }
+
+        @include LinkArrow;
+      }
+    }
   }
 }

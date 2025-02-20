@@ -28,6 +28,15 @@ li {
   background: url("/img/header_001.jpg") no-repeat center top;
   background-size: cover;
 }
+.header .title {
+  width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+  text-shadow: 1px 1px 2px white;
+}
+.header .sub-title {
+  font-size: 1.2rem;
+}
 
 .g_navi {
   height: 60px;
@@ -68,10 +77,47 @@ li {
   float: right;
   padding: 20px;
 }
+.contents .side_area .category_area, .contents .side_area .search_area {
+  border: 1px solid #eee;
+  bra: 5px;
+  padding: 10px;
+}
+.contents .side_area .search_area {
+  margin-bottom: 20px;
+}
+.contents .side_area .category_area li {
+  border-top: 1px solid #eee;
+  position: relative;
+}
+.contents .side_area .category_area li a {
+  display: block;
+  padding: 3px;
+}
+.contents .side_area .category_area li a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.contents .side_area .category_area li:after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -2.5px;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  transform: rotate(45deg);
+}
 
 .main_area section {
   margin-bottom: 30px;
   overflow: hidden;
+  clear: both;
+}
+.main_area section:after {
+  content: "";
+  display: block;
   clear: both;
 }
 .main_area section h3 {

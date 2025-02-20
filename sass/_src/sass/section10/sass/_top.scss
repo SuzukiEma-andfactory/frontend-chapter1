@@ -1,7 +1,10 @@
+@use 'mixin' as *;
+
 .main_area {
   section {
     margin-bottom: 30px;
     overflow: hidden;
+    @include clearfix;
     clear: both;
 
     h3 {
